@@ -1,0 +1,31 @@
+<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 sidebar">
+  <nav class="nav">
+    <ul (click)='onButtonGroupClick($event)'>
+      <div class="icon">
+        <img src="../../assets/img/hom-icon.png" style="width: 100%" alt="">
+      </div>
+      <img src="../../assets/img/logo.png" style="width: 100%" alt="">
+      <!-- <li [class.active]="headerTitle==='case detail' ||  headerTitle===''"><a routerLink='/sqlite'>Case Detail</a></li> -->
+      <!-- <li [class.active]="headerTitle==='ftk image'"><a routerLink='/ftk-image'>FTK Imager</a></li> -->
+      <li [class.active]="headerTitle==='maf tool' || headerTitle===''"><a routerLink='/maf-tool'>MAF
+          Tool</a></li>
+    </ul>
+  </nav>
+</div>
+<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9"
+  style="width:83%; padding: 0; background-color: #d1d1d1;height: 100vh;">
+  <div class="panel panel-default box-shadow headerTitle">
+    <div class="panel-body">
+      {{headerTitle===''? 'MAF Tool': headerTitle}}
+    </div>
+  </div>
+  <router-outlet styccle="margin-bottom: 20px"></router-outlet>
+  <footer>
+    <div class="panel panel-default shadow-4 footer">
+      <div class="">
+        <p class="cp-text">© Copyright 2019 ATTT2015/UIT. All rights reserved.
+        <br>Developed by: 15530043-Tang Duc Bao & 15520017-Khuu Ngoc Anh & Instructor: M.S.Nguyen Tan cam</p>
+      </div>
+    </div>
+  </footer>
+</div>

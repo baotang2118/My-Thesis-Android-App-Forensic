@@ -1,0 +1,89 @@
+<div *ngIf="!loadInfoAPK" class="category" >  
+  <div class="panel panel-default">
+    <div class="panel-body">           
+      <div class="input-group mb-3" style="display: flex; padding: 0 100px;">
+        <input type="text" [(ngModel)]="link" class="form-control" placeholder="Link of IMG File">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="AnalysisIMGFile(link)">Analysis</button>
+        </div>
+      </div>          
+    </div>
+  </div>
+  <div class="table-group">
+  <table class="responstable" *ngIf="reportList.length > 0">
+    <tr>
+      <th style="width: 7%;">Order</th>
+      <th data-th="Driver details" style="width: 18%;"><span>Report name</span></th>
+      <th style="width: 12%;">Android Version</th>
+      <th style="width: 12%;">Size of image</th>
+      <th>Path</th>
+      <th style="width: 15%;">Total time</th>
+
+    </tr>
+    <tr *ngFor='let report of reportList, let i = index'>
+      <td>{{i + 1}}</td>
+      <td class="linkRP" (click)='openReport(report.obj_id, report.current_times.replace(" ","_"))'>Report_{{report.current_times.replace(" ","_")}}</td>
+      <td>{{report.AndroidVersion}}</td>
+      <td>{{byteToGiga(report.size_in_bytes)}}&nbsp;GB</td>
+      <td>{{report.path_to_source}}</td>
+      <td>{{report.total_times}}</td>
+    </tr>
+    <tr style="background-color: white;">
+      <td style="border-right: 2px solid white !important;"></td>
+      <td style="border-right: 2px solid white !important;"></td>
+      <td style="border-right: 2px solid white !important;"></td>
+      <td style="border-right: 2px solid white !important;"></td>
+      <td style="border-right: 2px solid white !important;"></td>
+
+      <td style="text-align: right;">
+        <h4>Total reports: {{reportList.length}}</h4>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+  <table class="responstable" *ngIf="waitingReportList.length > 0">
+    <tr>
+      <th style="width: 7%;">Order</th>
+      <th data-th="Driver details"><span>Report name</span></th>
+      <th style="width: 25%;">Status</th>
+
+    </tr>
+    <tr *ngFor='let report of waitingReportList, let i = index'>
+      <td>{{i + 1}}</td>
+      <td>Report_{{report.id}}_{{getWaitingReportName(report.cmd)}}</td>
+      <td>{{report.status? 'Done': 'Waiting'}}</td>
+    </tr>
+    <tr style="background-color: white;">
+      <td style="border-right: 2px solid white !important;"></td>
+      <td style="border-right: 2px solid white !important;"></td>
+      <td style="text-align: right;">
+        <h4>Total waiting reports: {{waitingReportList.length}}</h4>
+      </td>
+    </tr>
+
+  </table>
+</div>
+</div>
+<div *ngIf="loadInfoAPK" class="sqlite row">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 tableName">
+      <p style="text-align: center;">{{reportName}}</p>
+      <p class="li-header">APK Name</p>
+        <ul class="mainmenu" (click)="onButtonGroupClick($event)">
+            <li *ngFor='let report of reportDetailList, let i=index' [ngClass]="{active: i === 0}" (click)="viewReport(report, i)"><i [class]="i === chooseFileIndex ? 'fa fa-folder-open' : 'fa fa-folder'" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;{{report.name}}</li>
+        </ul>
+    </div>
+    <div class="col-lg-10 contentTable">
+        <div class="background">
+  <app-overview></app-overview>
+  <div style="text-align: center;">
+      <button mat-button style="background-color: #3cb215; margin: 20px auto; color: white;"
+          (click)=" backToReport()">
+          <mat-icon>keyboard_backspace</mat-icon> Back to report list
+      </button>
+  </div>
+</div>
+</div>
+</div>

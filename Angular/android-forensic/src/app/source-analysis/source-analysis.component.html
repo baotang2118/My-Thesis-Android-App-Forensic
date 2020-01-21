@@ -1,0 +1,101 @@
+<main class="st_viewport">
+    <div class="st_wrap_table" data-table_id="4">
+        <header class="st_table_header">
+            <h3>Total Component</h3>
+            <div class="st_row center">
+                <div class="st_column _id">startActivity()</div>
+                <div class="st_column _id">startService()</div>
+                <div class="st_column _id">sendBroadcast()</div>
+                <div class="st_column _id">onReceive()</div>
+                <div class="st_column _id">getIntent()</div>
+            </div>
+        </header>
+        <div class="st_table">
+            <div class="st_row center" [ngClass]="{'row-even': i%2===0}">
+                <div class="st_column _id">{{reportDetail.startActivity}}</div>
+                <div class="st_column _id">{{reportDetail.startService}}</div>
+                <div class="st_column _id">{{reportDetail.sendBroadcast}}</div>
+                <div class="st_column _id">{{reportDetail.onReceive}}</div>
+                <div class="st_column _id">{{reportDetail.getIntent}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="st_wrap_table" data-table_id="0" *ngIf="reportDetail.emails.length>0">
+        <header class="st_table_header">
+            <h3>Email</h3>
+            <div class="st_row">
+                <div class="st_column _rank">Order</div>
+                <div class="st_column _name">Email is found in source</div>
+            </div>
+        </header>
+        <div class="st_table" *ngFor="let email of reportDetail.emails, let i=index">
+            <div class="st_row" [ngClass]="{'row-even': i%2===0}">
+                <div class="st_column _rank">{{i+1}}</div>
+                <div class="st_column _name">{{email.email}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="st_wrap_table" data-table_id="1" *ngIf="reportDetail.urls.length>0">
+        <header class="st_table_header">
+            <h3>URL</h3>
+            <div class="st_row">
+                <div class="st_column _rank">Order</div>
+                <div class="st_column _name">Url is found in source</div>
+            </div>
+        </header>
+        <div class="st_table" *ngFor="let url of reportDetail.urls, let i=index">
+            <div class="st_row" [ngClass]="{'row-even': i%2===0}">
+                <div class="st_column _rank">{{i+1}}</div>
+                <div class="st_column _name">{{url.url}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="st_wrap_table" data-table_id="2" *ngIf="reportDetail.ips.length>0">
+        <header class="st_table_header">
+            <h3>IP Address</h3>
+            <div class="st_row">
+                <div class="st_column _rank">Order</div>
+                <div class="st_column _name">Ip is found in source</div>
+            </div>
+        </header>
+        <div class="st_table" *ngFor="let ip of reportDetail.ips, let i=index">
+            <div class="st_row" [ngClass]="{'row-even': i%2===0}">
+                <div class="st_column _rank">{{i+1}}</div>
+                <div class="st_column _name">{{ip.ip}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="st_wrap_table" data-table_id="3" *ngIf="reportDetail.Permissions.length>0">
+        <header class="st_table_header">
+            <h3>Permissions</h3>
+            <div class="st_row">
+                <div class="st_column _rank">Order</div>
+                <div class="st_column _name">Permission is found in source</div>
+            </div>
+        </header>
+        <div class="st_table" *ngFor="let permissions of reportDetail.Permissions, let i=index">
+            <div class="st_row"
+                [ngClass]="{'row-even': i%2===0 && !checkPermission(permissions.PermissionName), 'permision-danger': checkPermission(permissions.PermissionName)}">
+                <div class="st_column _rank">{{i+1}}</div>
+                <div class="st_column _name">{{permissions.PermissionName.replace("*","")}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="st_wrap_table component" data-table_id="5" *ngIf="reportDetail.Components.length>0">
+            <header class="st_table_header">
+                <h3>Component detail</h3>
+                <div class="st_row">
+                    <div class="st_column _componentName">Component Name</div>
+                    <div class="st_column _type">Component Type</div>
+                    <div class="st_column _surname">Export Status</div>
+                </div>
+            </header>
+            <div class="st_table" *ngFor="let component of reportDetail.Components, let i=index">
+                <div class="st_row" [ngClass]="{'row-even': i%2===0}">
+                    <div class="st_column _componentName">{{component.ComponentName}}</div>
+                    <div class="st_column _type">{{component.ComponentType}}</div>
+                    <div class="st_column _surname">{{component.ExportStatus===null?'null':component.ExportStatus}}</div>
+                </div>
+            </div>
+        </div>
+</main>

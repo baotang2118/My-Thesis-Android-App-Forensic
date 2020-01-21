@@ -1,0 +1,79 @@
+<mat-tab-group *ngIf="reportDetail">
+    <mat-tab label="Overview">
+        <div class="overview-content">
+            <div class="col-lg-2">
+            </div>
+            <div class="col-lg-8 header-overview">
+                <div class="col-lg-5 android-icon">
+                    <img [src]="checkImage(reportDetail.path2Icon)?'http://localhost/api/'+reportDetail.path2Icon:'assets/img/401-4014814_android-filetransfer-icon-android-file-transfer-icon.png'"
+                        alt="" style="height:200px;">
+                </div>
+                <div class="col-lg-7 inforTop">
+                    <div class="app-name">
+                        <h2 class="file-name">{{reportDetail.appName | titlecase}}</h2>
+                    </div>
+                    <p><strong>Apk name:</strong>&nbsp;&nbsp;{{reportDetail.name}}</p>
+                    <p><strong>Package name:</strong>&nbsp;&nbsp;{{reportDetail.packageName}}</p>
+                    <p><strong>Android version:</strong>&nbsp;&nbsp;{{reportDetail.androidversionName}}</p>
+                    <p><strong>Android version code:</strong>&nbsp;&nbsp;{{reportDetail.androidversionCode}}</p>
+                </div>
+            </div>
+            <div class="col-lg-2">
+            </div>
+            <div class="col-lg-12 extend-info">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>Created time</strong></td>
+                            <td>{{reportDetail.ctime}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Last accessed time</strong></td>
+                            <td>{{reportDetail.atime}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Last modified time</strong></td>
+                            <td>{{reportDetail.mtime}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Last changed time</strong></td>
+                            <td>{{reportDetail.crtime}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MD5</strong></td>
+                            <td>{{reportDetail.MD5}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SHA1</strong></td>
+                            <td>{{reportDetail.SHA1}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SHA256</strong></td>
+                            <td>{{reportDetail.SHA256}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Certificate">
+        <div id="notebook-paper">
+            <header>
+                <h1>Certificate</h1>
+            </header>
+            <div id="content">
+                <div class="hipsum">
+                    <p *ngFor="let item of cert">{{item}}</p>
+                    <p *ngFor="let item of publicKeyList">{{item}}</p>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="File & Media">
+        <app-media></app-media>
+    </mat-tab>
+    <mat-tab label="Source Analysis">
+        <app-source-analysis></app-source-analysis>
+    </mat-tab>
+</mat-tab-group>

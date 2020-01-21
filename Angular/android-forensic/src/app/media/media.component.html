@@ -1,0 +1,98 @@
+<div class="media">
+    <div class="media-tab">
+        <h4>File</h4>
+        <div class="image-gallery">
+            <ng-container *ngFor="let path of fileRecover">
+                <ng-container [ngSwitch]="true">
+                    <div class="unknowFile" *ngSwitchCase="path.file_name.includes('.db')"
+                        (click)="download(path.link_to_file, path.file_name)">
+                        <a target="_blank"><img src="assets/img/db.png">
+                            <label for="">{{path.file_name}}</label>
+                        </a>
+                    </div>
+                    <div class="unknowFile" *ngSwitchCase="path.file_name.includes('.xml')"
+                        (click)="download(path.link_to_file, path.file_name)">
+                        <a target="_blank"><img src="assets/img/xml.png">
+                            <label for="">{{path.file_name}}</label>
+                        </a>
+                    </div>
+                    <div class="unknowFile" *ngSwitchCase="path.file_name.includes('.log')"
+                        (click)="download(path.link_to_file, path.file_name)">
+                        <a target="_blank"><img src="assets/img/log.png">
+                            <label for="">{{path.file_name}}</label>
+                        </a>
+                    </div>
+                    <div class="unknowFile" *ngSwitchCase="path.file_name.includes('.so')"
+                        (click)="download(path.link_to_file, path.file_name)">
+                        <a target="_blank"><img src="assets/img/so.png">
+                            <label for="">{{path.file_name}}</label>
+                        </a>
+                    </div>
+                    <div class="unknowFile"
+                        *ngSwitchCase="path.file_name.includes('.zip') || path.file_name.includes('.rar')"
+                        (click)="download(path.link_to_file, path.file_name)">
+                        <a target="_blank"><img src="assets/img/zip.png">
+                            <label for="">{{path.file_name}}</label>
+                        </a>
+                    </div>
+                    <div class="unknowFile" *ngSwitchCase="path.file_name.includes('.jar')"
+                        (click)="download(path.link_to_file, path.file_name)">
+                        <a target="_blank"><img src="assets/img/jar.png">
+                            <label for="">{{path.file_name}}</label>
+                        </a>
+                    </div>
+                    <div class="unknowFile"
+                        *ngSwitchCase="path.file_name.includes('.doc') || path.file_name.includes('.docx')"
+                        (click)="c">
+                        <a target="_blank"><img src="assets/img/doc.png">
+                            <label for="">{{path.file_name}}</label>
+                        </a>
+                    </div>
+                    <div class="unknowFile" *ngSwitchCase="path.file_name.includes('.pdf')"
+                        (click)="download(path.link_to_file, path.file_name)">
+                        <a target="_blank"><img src="assets/img/pdf.png">
+                            <label for="">{{path.file_name}}</label>
+                        </a>
+                    </div>
+                    <div class="unknowFile" *ngSwitchDefault (click)="download(path.link_to_file, path.file_name)">
+                        <a target="_blank"><img src="assets/img/unknown.png">
+                            <label for="">{{path.file_name}}</label>
+                        </a>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </div>
+    </div>
+    <div class="media-tab">
+        <h4>Media</h4>
+        <div class="image-gallery">
+            <div class="card-deck">
+                <ng-container *ngFor="let path of mediaList">
+                    <ng-container [ngSwitch]="true">
+                        <div class="card unknowFile" *ngSwitchCase="path.file_name.includes('.mp4')">
+                            <a data-fancybox [href]="'http://localhost/api/'+path.link_to_file">
+                                <img class="card-img-top img-fluid" src="assets/img/mp4.png" />
+                                <label for="">{{path.file_name}}</label>
+                            </a>
+                        </div>
+                        <div class="card unknowFile"
+                            *ngSwitchCase="checkImage(path.file_name)">
+                            <a data-fancybox="gallery" [href]="'http://localhost/api/'+path.link_to_file"><img
+                                    [src]="'http://localhost/api/'+path.link_to_file"></a>
+                            <label for="">{{path.file_name}}</label>
+                        </div>
+                        <div class="card unknowFile" *ngSwitchCase="path.file_name.includes('.mp3')" (click)="playAudio('http://localhost/api/'+path.link_to_file, path.file_name, path.file_name)">
+
+                                <img class="card-img-top img-fluid" src="assets/img/mp3.png" />
+
+                            <label for="">{{path.file_name}}</label>
+                        </div>
+                        <!-- <div class="card">
+v
+                        </div> -->
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

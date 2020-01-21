@@ -1,0 +1,122 @@
+h1{
+    font-weight: 400;
+  }
+  a{
+    color: inherit;
+  }
+  p{
+    margin-top: .7em;
+  }
+  .warning{
+    color: rgb(62,148,236);
+  }
+  .st_viewport{
+    /* max-height: 500px; */
+    overflow: auto;
+    height: 100%;
+  }
+  .center .st_column{
+    text-align: center;
+  }
+  [data-table_id="1"]{
+    background-color: rgb(255,115,0);
+  }
+  [data-table_id="2"]{
+    background-color: rgb(61,53,39);
+    color: rgb(220,220,220);
+  }
+  [data-table_id="3"]{
+    background-color: rgba(168,189,4, .8);
+  }
+  [data-table_id="4"]{
+    background-color: rgba(238, 216, 93, 0.8);
+  }
+  [data-table_id="5"]{
+    background-color: rgba(41, 241, 248, 0.8);
+  }
+  
+  ._rank{
+    min-width: 80px;
+  }
+  ._id{
+    width: 130px;
+  }
+  ._name{
+    min-width: 130px;
+  }
+  ._surname{
+    min-width: 130px;
+  }
+  ._year{
+    min-width: 80px;
+  }
+  ._section{
+    min-width: 130px;
+  }
+  ._componentName{
+      width: 70%;
+  }
+  ._type{
+    width: 20%;
+  }
+  pre{
+    overflow: auto;
+  }
+  
+  /** Sticky table styles **/
+  .st_viewport{
+    background-color: rgb(94, 128, 161);
+    color: rgb(27,30,36);
+    /* margin: 20px 0; */
+    scrollbar-width: thin;
+  }
+  /* ###  Table wrap */
+  /* ##   header */
+  .st_table_header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: rgb(27,30,36);
+    color: rgb(220,220,220);
+  }
+  .st_table_header h3{
+    font-weight: 400;
+    margin: 0 20px;
+    padding: 10px 0 0;
+  }
+  .st_table_header .st_row{
+    color: rgba(220,220,220, .7);
+  }
+  .permision-danger{
+    background-color: #f0c5c5 !important;
+    color: #bd1818 !important;
+    border-bottom: 2px solid !important;
+  }
+  /* ##  table */
+  .st_table{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /* #   row */
+  .st_row{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  .row-even{
+    background-color: rgba(0,0,0, .1);
+  }
+  /* #   column */
+  .st_column{
+    padding: 10px 20px;
+  }
