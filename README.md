@@ -1,5 +1,5 @@
 # My-Thesis-Android-App-Forensic
-This is my thesis project
+This is my thesis project, we study Android phone forensic topic and focus only on the user app, which means we skip default app which come from OEM. The input can be an raw disk image or a rooted phone.
 
 How to use this app:
 - Install basic tools
@@ -15,8 +15,8 @@ How to use this app:
 - Copy all file in folder php to folder /api
 - Turn on Apache, MySQL in XAMPP, use your browser to browse to http://localhost/api/, click get_report.php, if you saw the return data is in json format without error, you'd complete installing process.
 
-Để phân tích file:
-- Dùng command Prompt hoặc PowerShell:
+To analyze:
+- By using command Prompt or PowerShell:
   + di chuyển vào trong thư mục chứa source code python của project
   + Gõ python tools_android_apk_finfo_collection.py --input <ten_img>
 - Dùng giao diện web:
