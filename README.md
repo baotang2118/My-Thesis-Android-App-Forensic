@@ -45,14 +45,3 @@ Chú ý 3: Phải thay đổi version adb client cho phù hợp với version ad
 Để mô hình hóa dữ liệu:
 - Copy id của report trong qua trình phân tích
 - Chạy file data_visualate.py --plot --map --report <report id>
-
-Dù trong CD đã có file cài đặt, nhưng chưa chứa các config môi trường, hơn nữa file máy ảo khá nặng nên không thể chép vào trong CD được.
-
-
-##Nhóm tác giả
-Tăng Đức Bảo -15520043
-email: 15520043@gm.uit.edu.vn
-0339688830
-Khưu Ngọc Anh - 15520017
-email: 15520017@gm.uit.edu.vn
-0354400648
