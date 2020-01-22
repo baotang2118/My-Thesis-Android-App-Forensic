@@ -28,19 +28,20 @@ To analyze:
 
 Note 1: the file format must be raw, dd, iso or img, if not, you have to use VboxManage tool to convert. Type:
 [VBoxManage.exe clonehd input.vdi Output.img --format raw]
-Note 2: At the first running time, web_binding.py must be run first so it can create it's own table in DB
+Note 2: at the first running time, web_binding.py must be run first so it can create it's own table in DB
 
 To clone Android phone storage:
-- Run clone.py in "tools" directory với cú pháp python clone.py --name <ten_img>, phần mềm sẽ tự động check công cụ adb và kết nối điện thoại
-- File output nằm cùng thư mục với file clone.py
+- Run clone.py in "tools" directory, type: python clone.py --name <link_to_img>, it'll automatically check adb and connection
+- The output will be located at the same folder with clone.py
 
-Note 3: Phải thay đổi version adb client cho phù hợp với version adb server
+Note 3: adb client must be replaced to suite the adb server (version)
 
-Để xem web report
-- Bật Apache trong XAMPP lên hoặc chạy file run_xampp.bat
-- Chạy file run_angularjs.bat
-- Dùng trình duyệt vào đường dẫn localhost:4200
+To view web report
+- Turn on Apache in XAMPP or run run_xampp.bat
+- Run run_angularjs.bat
+- Browse to localhost:4200
 
-Để mô hình hóa dữ liệu:
-- Copy id của report trong qua trình phân tích
-- Chạy file data_visualate.py --plot --map --report <report id>
+To visualize the gathered information:
+- Copy report's id from web report or web_binding.py's window
+- Run data_visualate.py --plot --map --report <report_id>
+- Currently, this app support only android 7.0
