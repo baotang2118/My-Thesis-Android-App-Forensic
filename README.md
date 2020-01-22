@@ -1,7 +1,7 @@
 # My-Thesis-Android-App-Forensic
 This is my thesis project, we study Android phone forensic topic and focus only on the user app, which means we skip default app which come from OEM. The input can be an raw disk image or a rooted phone.
 
-How to use this app:
+## How to use this app:
 - Install basic tools
   - Python 3
   - mysql-connector, Androiguard, matplotlib, folium
@@ -47,3 +47,7 @@ To visualize the gathered information:
 - Copy report's id from web report or web_binding.py's window
 - Run `python data_visualate.py --plot --map --report <report_id>`
 - Currently, this app support only android 7.0
+
+## Results
+update later
+
