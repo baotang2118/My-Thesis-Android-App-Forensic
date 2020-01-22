@@ -1,50 +1,6 @@
 # My-Thesis-Android-App-Forensic
 This is my thesis project
 #README
-##Cấu trúc thư mục
-ROOT/
---ANDROID_APP_FORENSIC/
-----SETUP/
-------Project_Thesis_1920.zip
-----SOURCE/
-------Project_Thesis_1920/
---------Angular/
---------php/
---------python3/
---BAO CAO/
-----ABS/
-------video_KL.mp4
-----DOC/
-------UIT_BaoCaoKL.docx
-----PDF/
-------UIT_BaoCaoKL.pdf
---REF/
-----[1]. Abdullah Azfar, Kim-Kwang Raymond Choo, Lin Liu (2016), An Android Social App Forensics Adversary Model.pdf
-----[4]. Animesh Kumar Agrawal, Aman Sharma, Pallavi Khatri (2019), Android Forensics Tools and Techniques for Manual Data Extraction.pdf
-----[5]. Bernard Chukwuemeka Ogazi-Onyemaechi, Ali Dehghantanha, Kim-Kwang Raymond Choo (2017), Performance of Android Forensics Data Recovery Tools.pdf
-----[6]. Cosimo Anglano (2014), Forensic analysis of WhatsApp Messenger on Android smartphones.pdf
-----[7]. F.Karpisek, I.Baggili, F.Breitingerb (2015), WhatsApp network forensics Decrypting and understanding the WhatsApp call signaling messages.pdf
-----[8]. Joe Kong (2016), Data Extraction on MTK-based Android Mobile Phone Forensics.pdf
-----[9]. Nihar Ranjan Roy, Anshul Kanchan Khanna, Leesha Aneja (2016), Android phone forensic Tools and techniques.pdf
---SOFT/
-----androguard.exe
-----jadx-1.0.0.exe
-----sleuthkit.exe
---README
-
-
-##Hướng dẫn
-Các tài liệu được lưu theo cấu trúc thư mục trên
-- Thư mục ANDROID_APP_FORENSIC gồm hai thư mục
-  - SETUP: chứa các file dùng để install chương trình
-  - SOURCE: chứa các file mã nguồn
-- Thư mục BAO CAO: chứa các tập tin tài liệu văn bản của khóa luận, với các thư mục con được tổ chức như sau:
-  - DOC: chứa tài liệu dạng .DOC.
-  - PDF: chứa tài liệu dạng .PDF.
-  - ABS: chứa báo cáo khóa luận gồm báo cáo dạng .PPT (slide), .AVI (clip demo)
-- Thư mục REF: chứa các tài liệu dùng để tham khảo khi thực hiện khóa luận.
-- Thư mục SOFT: chứa các phần mềm liên quan trong quá trình thực hiện khóa luận.
-- README chứa hướng dẫn sử dụng cho việc sử dụng đĩa CD, có đầy đủ thông tin liên lạc với nhóm tác giả (email, điện thoại).
 
 Cách dùng công cụ như sau:
 - Cài các phầm mềm cần thiết
