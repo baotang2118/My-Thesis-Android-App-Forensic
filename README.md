@@ -17,24 +17,24 @@ How to use this app:
 
 To analyze:
 - By using command Prompt or PowerShell:
-  + di chuyển vào trong thư mục chứa source code python của project
-  + Gõ python tools_android_apk_finfo_collection.py --input <ten_img>
-- Dùng giao diện web:
-  + Chạy file web_binding.py bằng command Prompt hoặc PowerShell
-  + Bật Apache, MySQL trong XAMPP lên
-  + Dùng trình duyệt vào đường dẫn localhost:4200, điền đường dẫn đến file vào (ví dụ: E:\raw_image_disk\abcxyz.dd), chọn Analysis
-  + Danh sách hàng chờ được hiện ra ở bảng dưới
-  + Danh sách file đã phân tích xong được hiện ra ở bảng trên
+  + cd into python folder
+  + Type python tools_android_apk_finfo_collection.py --input <link_to_img>
+- By using web UI:
+  + Run web_binding.py by command Prompt or PowerShell
+  + Turn on Apache, MySQL in XAMPP
+  + Use your browser to browse to localhost:4200, fill file'path in form (Ex: E:\raw_image_disk\abcxyz.dd), click Analysis
+  + Incompleted Analysis will come below
+  + Completed Analysis will appear above afer finish, you can track it on command Prompt or PowerShell
 
-Chú ý 1: Nếu định dạng bản sao chưa phải là raw, dd, iso hoặc img thì ta phải dùng công cụ VboxManage để chuyển đổi. Cú pháp như sau:
+Note 1: the file format must be raw, dd, iso or img, if not, you have to use VboxManage tool to convert. Type:
 [VBoxManage.exe clonehd input.vdi Output.img --format raw]
-Chú ý 2: Trong lần chạy đầu tiên, phải bật web_binding.py trước để nó khởi tạo table cho DB
+Note 2: At the first running time, web_binding.py must be run first so it can create it's own table in DB
 
-Để clone dữ ổ cứng điện thoại
-- Chạy file clone.py trong thư mục tools với cú pháp python clone.py --name <ten_img>, phần mềm sẽ tự động check công cụ adb và kết nối điện thoại
+To clone Android phone storage:
+- Run clone.py in "tools" directory với cú pháp python clone.py --name <ten_img>, phần mềm sẽ tự động check công cụ adb và kết nối điện thoại
 - File output nằm cùng thư mục với file clone.py
 
-Chú ý 3: Phải thay đổi version adb client cho phù hợp với version adb server
+Note 3: Phải thay đổi version adb client cho phù hợp với version adb server
 
 Để xem web report
 - Bật Apache trong XAMPP lên hoặc chạy file run_xampp.bat
