@@ -1,20 +1,19 @@
 # My-Thesis-Android-App-Forensic
 This is my thesis project
-#README
 
-Cách dùng công cụ như sau:
-- Cài các phầm mềm cần thiết
+How to use this app:
+- Install basic tools
   - Python 3
-  - Androiguard (cài từ source code), matplotlib, folium
+  - mysql-connector, Androiguard, matplotlib, folium
   - Nodejs, Angularjs
   - XAMPP
-- Copy toàn bộ thư mục đồ án vào nơi tùy ý
-- Chạy file cmd_databases.py, chỉ chạy một lần duy nhất để tạo database
-- Chạy file demo_preprare_datasheet.py để tạo datasheet, người dùng phải tự điền thông tin vào
-- File delete.bat dùng để reset chương trình, xóa hết databases và các tệp tin tạm (cần phải chỉnh sửa đường dẫn trong nội dung cho phù hợp)
-- Tạo một thư mục mới tên là api vào trong đường dẫn htdocs của XAMPP
-- Copy toàn bộ code trong thư mục php của đồ án cho vào trong folder /api này
-- Bật Apache, MySQL trong XAMPP lên, dùng trình duyệt di chuyển đến đường dẫn vừa tạo (Ví dụ: http://localhost/api/), chọn get_report.php, thấy dữ liệu json trả về mà không báo lỗi là thành công.
+- Clone and exact project
+- Run cmd_databases.py, run only once to create the database
+- Run demo_preprare_datasheet.py to create datasheet, user has to define the app and it's external directory's name by themselves
+- To reset app: run delete.bat, this action will delete all databases and temporary file (user has to adjust temporary file's localtion inside the code)
+- Add new folder named "api" in htdocs (Ex: /xampp/htdocs/api/)
+- Copy all file in folder php to folder /api
+- Turn on Apache, MySQL in XAMPP, use your browser to browse to http://localhost/api/, click get_report.php, if you saw the return data is in json format without error, you'd complete installing process.
 
 Để phân tích file:
 - Dùng command Prompt hoặc PowerShell:
