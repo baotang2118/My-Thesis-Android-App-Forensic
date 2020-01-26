@@ -50,4 +50,13 @@ To visualize the gathered information:
 
 ## Results
 update later
-
+![report list shows the info of smartphone storage](/images/image59.png)
+![report from Android 4 - overview](/images/image60.png)
+![report from Android 7 - overview](/images/image61.png)
+![report from Android 4 - cert](/images/image62.png)
+![report from Android 4 - file and media](/images/image63.png)
+![report from Android 4 - playing video](/images/image64.png)
+![report from Android 4 - source analysis](/images/image65.png)
+![report from Android 4 - graph call and chat freq](/images/image66.png)
+![report from Android 4 - graph call time](/images/image67.png)
+![report from Android 4 - map](/images/image68.png)
