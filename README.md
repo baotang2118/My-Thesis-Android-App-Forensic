@@ -49,14 +49,24 @@ To visualize the gathered information:
 - Currently, this app support only android 7.0
 
 ## Results
-update later
+The web report likes this.
 ![report list shows the info of smartphone storage](/images/image59.png)
+Report list shows the info of smartphone storage
 ![report from Android 4 - overview](/images/image60.png)
+Report from Android 4 - overview
 ![report from Android 7 - overview](/images/image61.png)
+Report from Android 7 - overview
 ![report from Android 4 - cert](/images/image62.png)
+Report from Android 4 - cert
 ![report from Android 4 - file and media](/images/image63.png)
+Report from Android 4 - file and media
 ![report from Android 4 - playing video](/images/image64.png)
+Report from Android 4 - playing video
 ![report from Android 4 - source analysis](/images/image65.png)
+Report from Android 4 - source analysis
 ![report from Android 4 - graph call and chat freq](/images/image66.png)
+Report from Android 4 - graph call and chat freq
 ![report from Android 4 - graph call time](/images/image67.png)
-![report from Android 4 - map](/images/image68.png)
+Report from Android 4 - graph call time
+![report from Android 4 - map](/images/image68.jpeg)
+Report from Android 4 - map
