@@ -1,11 +1,11 @@
 # My-Thesis-Android-App-Forensic
 This is my thesis project, we study Android phone forensic topic and focus only on the user app, which means we skip default app which come from OEM. The input can be an raw disk image or a rooted phone.
 
-## How it works:
+## How does it works:
 - Automatically collect all useful file, information such as date, media, sqlite file and plain text document from smartphone.
 - Automatically analyze apk.
 - Automatically arrange and present the result.
-- Notice that the output doesn't follow any lawful evidence format.
+- *Notice that the output doesn't follow any lawful evidence format.*
 
 ## How to use this app:
 - Install basic tools
