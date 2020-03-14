@@ -1,1 +1,11 @@
-sleuthkit/* linguist-vendored
+# Auto detect text files and perform LF normalization
+
+* text=auto
+
+Angular/android-forensic/src/assets/lightgallery/* linguist-vendored
+Angular/android-forensic/src/polyfills.ts linguist-vendored
+Angular/android-forensic/src/test.ts linguist-vendored
+Angular/android-forensic/src/styles.css linguist-vendored
+sleuthkit/bin/* linguist-vendored
+jadx-1.0.0/bin/* linguist-vendored
+python/my_map.html linguist-vendored
