@@ -1,5 +1,5 @@
 # My-Thesis-Android-App-Forensic
-This is my thesis project, we study Android phone forensic topic and focus only on the user app, which means we skip default app which come from OEM. The input can be an raw disk image or a rooted phone.
+This is my thesis project, we study Android phone forensic topic and focus only on the user app, which means we skip default app which come from OEM. The input can be an raw disk image or a rooted phone. This research made me realize the nature of digital forensic, the role of mobile platform in investigation and how it affects the order and law.
 
 ## How does it works:
 - Automatically collect all useful file such as date, media, sqlite file and plain text document from smartphone.
