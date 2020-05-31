@@ -4,7 +4,7 @@ This is my thesis project, we study Android phone forensic topic and focus only 
 ## How does it works:
 - Automatically collect all useful file such as date, media, sqlite file and plain text document from smartphone.
 - Automatically analyze apk.
-- Automatically arrange and present the result.
+- Automatically arrange and display the result.
 - Not doing yet, Automatically extract information for archive file.
 - *Notice that the output doesn't follow any legal evidence's format.*
 
